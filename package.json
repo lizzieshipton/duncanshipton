@@ -1,0 +1,11 @@
+{
+  "name": "duncanshipton",
+  "version": "1.0.0",
+  "description": "Santa Cruz guitar lessons and performance",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Lizzie Shipton",
+  "license": "ISC"
+}
