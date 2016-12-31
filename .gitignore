@@ -1,0 +1,12 @@
+# Mac Stuff
+.DS_Store
+
+# Packages
+node_modules
+bower_components
+
+# Linting
+.eslintrc.json
+
+# Dev Docs
+dev/*

@@ -4,8 +4,19 @@
   "description": "Santa Cruz guitar lessons and performance",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "start": "nodemon server.js"
   },
   "author": "Lizzie Shipton",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "nodemon": "^1.11.0",
+    "sequelize": "^3.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2"
+  }
 }
