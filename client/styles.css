@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+#addAVideo {
+  background-color: green;
+}
+
+#addAPhoto {
+  background-color: blue;
+}
+
+#addAGig {
+  background-color: red;
+}

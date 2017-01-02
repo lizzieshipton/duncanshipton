@@ -9,6 +9,7 @@ const Video = db.define('video', {
   },
   title: Sequelize.STRING,
   url: Sequelize.STRING,
+  filmographer: Sequelize.STRING,
   date_filmed: Sequelize.DATEONLY,
   snippet: Sequelize.STRING,
 });
@@ -20,6 +21,7 @@ const Photo = db.define('photo', {
     autoIncrement: true,
   },
   url: Sequelize.STRING,
+  photographer: Sequelize.STRING,
   date_taken: Sequelize.DATEONLY,
   snippet: Sequelize.STRING,
 });
@@ -34,6 +36,16 @@ const Gig = db.define('gig', {
   date: Sequelize.STRING,
   time: Sequelize.STRING,
 });
+
+db
+  .sync({ force: false })
+  .then(() => {
+    console.log('All tables created');
+  })
+  .catch((err) => {
+    console.log('error creating tables', err);
+  });
+
 
 module.exports = {
   Video,

@@ -5,15 +5,7 @@ const getVideos = require('./getVideos');
 const getPhotos = require('./getPhotos');
 const getGigs = require('./getGigs');
 
-const db = require('../../db/config');
-
-db.authenticate().then(() => {
-  console.log('Connection established');
-}).catch((err) => {
-  console.log('Unable to connect: ', err);
-});
-
-module.exports.routeHandlers = {
+module.exports = {
   postVideos,
   postPhotos,
   postGigs,
