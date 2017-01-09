@@ -1,6 +1,20 @@
-duncanApp.controller('adminController', ['$scope', function($scope){
-  console.log('adminController');
+duncanApp.controller('adminController', ['$scope', '$sce', 'videoService', function($scope, $sce, videoService){
+  $scope = {};
+
+  
+  $scope.saveVideo = (video) => {
+    console.log(video);
+    videoService.postVideo(video)
+    .then((response) => {
+      console.log(response);
+      $scope.response = response;
+      $scope.reset;
+    });
+  };
+
+
+
+  $scope.reset = () => {
+    $scope = {};
+  };
 }]);
-//input for youtube urls
-//input for image urls
-//input for gig dates/descriptions

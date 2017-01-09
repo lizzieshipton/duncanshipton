@@ -4,14 +4,11 @@
   padding:0;
 }
 
-#addAVideo {
-  background-color: green;
+input, textarea {
+  display: block;
 }
-
-#addAPhoto {
-  background-color: blue;
-}
-
-#addAGig {
-  background-color: red;
-}
+.save {
+  padding: 1em 1em 1em 1em;
+  border-radius: 0;
+  font-family: arial;
+ }

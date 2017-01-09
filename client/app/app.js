@@ -1,8 +1,13 @@
 const duncanApp = angular.module('duncanApp', ['ngRoute']);
 
-duncanApp.config(['$locationProvider', '$routeProvider',
-  function config($locationProvider, $routeProvider) {
+duncanApp.config(['$locationProvider', '$routeProvider', '$sceDelegateProvider',
+  function config($locationProvider, $routeProvider, $sceDelegateProvider) {
     $locationProvider.hashPrefix('!');
+
+    $sceDelegateProvider.resourceUrlWhitelist([
+      'self',
+      'https://www.youtube.com/**'
+    ]);
 
     $routeProvider.
         when('/admin', {

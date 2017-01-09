@@ -35,6 +35,7 @@ const Gig = db.define('gig', {
   location: Sequelize.STRING,
   date: Sequelize.STRING,
   time: Sequelize.STRING,
+  notes: Sequelize.STRING,
 });
 
 db
