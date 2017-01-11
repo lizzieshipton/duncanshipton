@@ -1,20 +1,28 @@
-duncanApp.controller('adminController', ['$scope', '$sce', 'videoService', function($scope, $sce, videoService){
-  $scope = {};
+duncanApp.controller('adminController', ['$scope', '$sce', 'videoService', 'photoService', function($scope, $sce, videoService, photoService){
 
-  
-  $scope.saveVideo = (video) => {
-    console.log(video);
+  $scope.show = function() {
+    // $scope.video.url = $scope.video.url.replace('watch?v=', 'embed/');
+    $scope.preview = true;
+  };
+
+  $scope.saveVideo = function(video) {
     videoService.postVideo(video)
-    .then((response) => {
-      console.log(response);
-      $scope.response = response;
-      $scope.reset;
+    .then(() => {
+      $scope.reset();
     });
   };
 
+  $scope.savePhoto = function(photo) {
+    console.log("PHOTO", photo);
+    photoService.postPhoto(photo)
+    .then((response) => {
+      console.log(response);
+    })
+  };
 
-
-  $scope.reset = () => {
-    $scope = {};
+  $scope.reset = function() {
+    $scope.video = null;
+    $scope.photo = null;
+    $scope.gig = null;
   };
 }]);

@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-xs-4" id="videos">
       <div class="preview">
-        <iframe id="videoPreview"></iframe>
+        <iframe id="videoPreview" src={{video.url}} ng-show='preview'></iframe>
       </div>
       <div id="addVideo">
         <form id="video" ng-model="videoForm">
-          <label>URL </label><input type="url" placeholder="paste video link..." id="urlInput" ng-model="video.url"/>
+          <label>URL </label><button class="preview" ng-click='show()'>preview</button><input type="url" placeholder="paste video link..." id="urlInput" ng-model="video.url"/>
           <label>Title </label><input type="text" placeholder="enter display title..."  id="titleInput" spellcheck ng-model="video.title"/>
           <label>Videographer </label><input type="text" placeholder="enter display name..."  class="ographerInput" spellcheck ng-model="video.videographer"/>
           <label>Date Filmed </label><input type="date" class="dateInput" ng-model="video.date"/>
@@ -16,15 +16,16 @@
       </div>
     </div>
     <div class="col-xs-4" id="photos">
-      <pre class="preview">
-      </pre>
+      <div class="preview">
+        <img id="photoPreview" src={{photo.image}} ng-show='preview'/>
+      </div>
       <div id="addPhoto">
         <form id="photo">
-          <label>Image File </label><input type="file" type="image" id="imgInput" multiple/>
-          <label>Photographer </label><input type="text" placeholder="enter display name..."  class="ographerInput" spellcheck/>
-          <label>Date Taken </label><input type="date" class="dateInput"/>
-          <label>Description </label><textarea form="photo" placeholder="enter brief snippet..."  class="descInput" spellcheck></textarea>
-          <input type="submit" value="Save" class="save"/>
+          <label>Image File </label><button class="preview" ng-click='show()'>preview</button><input photo-upload type="file" id="imgInput" ng-model="photo.image" multiple/>
+          <label>Photographer </label><input type="text" placeholder="enter display name..."  class="ographerInput" ng-model="photo.photographer" spellcheck/>
+          <label>Date Taken </label><input type="date" class="dateInput" ng-model="photo.date"/>
+          <label>Description </label><textarea form="photo" placeholder="enter brief snippet..."  class="descInput" ng-model="photo.snippet" spellcheck></textarea>
+          <input type="submit" value="Save" class="save" ng-click="savePhoto(photo)"/>
         </form>
       </div>
     </div>
@@ -38,10 +39,12 @@
           <label>Date </label><input type="date" />
           <label>Time </label><input type="time" id="timeInput"/>
           <label>Notes </label><textarea form="gig" placeholder="enter brief snippet..." maxlength="250"  class="descInput" spellcheck></textarea>
-          <input type="submit" value="Save" class="save"/>
+          <input type="submit" value="Save" class="save" ng-click="saveGig(gig)"/>
           <br />
         </form>
       </div>
     </div>
   </div>
 </div>
+
+<!--TODO: upload arrangement pdfs -->

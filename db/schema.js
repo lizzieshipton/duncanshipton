@@ -20,7 +20,7 @@ const Photo = db.define('photo', {
     primaryKey: true,
     autoIncrement: true,
   },
-  url: Sequelize.STRING,
+  image: Sequelize.BLOB(),
   photographer: Sequelize.STRING,
   date_taken: Sequelize.DATEONLY,
   snippet: Sequelize.STRING,
@@ -33,8 +33,8 @@ const Gig = db.define('gig', {
     autoIncrement: true,
   },
   location: Sequelize.STRING,
-  date: Sequelize.STRING,
-  time: Sequelize.STRING,
+  date: Sequelize.DATEONLY,
+  time: Sequelize.TIME,
   notes: Sequelize.STRING,
 });
 
