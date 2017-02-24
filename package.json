@@ -1,10 +1,13 @@
 {
   "name": "duncanshipton",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Santa Cruz guitar lessons and performance",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "jasmine",
+    "precommit": "eslint .",
+    "dev": "grunt watch:dev",
+    "prod": "grunt prod",
     "start": "nodemon server/server.js"
   },
   "author": "Lizzie Shipton",
@@ -13,11 +16,29 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
+    "gruntfile-api": "0.0.10",
     "nodemon": "^1.11.0",
     "pg": "^6.1.2",
     "sequelize": "^3.28.0"
   },
   "devDependencies": {
-    "eslint": "^3.12.2"
+    "eslint": "^3.12.2",
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "^1.1.0",
+    "grunt-bower": "^0.21.4",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-jasmine": "^1.1.0",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-traceur": "^0.5.5",
+    "gruntify-eslint": "^3.1.0",
+    "husky": "^0.13.1",
+    "traceur": "0.0.111"
   }
 }
