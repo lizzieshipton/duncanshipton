@@ -1,4 +1,4 @@
-duncanApp.factory('videoService', ['$http', function($http) {
+angular.module('duncanApp').factory('videoService', ['$http', function($http) {
 
   const videoService = {};
 

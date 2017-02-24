@@ -1,6 +1,6 @@
 <div class="container-fluid" id="adminMainDiv">
   <div class="row">
-    <div class="col-xs-4" id="videos">
+    <div class="col-xs-12 col-sm-6 col-md-3" id="videos">
       <div class="preview">
         <iframe id="videoPreview" src={{video.url}} ng-show='preview'></iframe>
       </div>
@@ -15,7 +15,7 @@
         </form>
       </div>
     </div>
-    <div class="col-xs-4" id="photos">
+    <div class="col-xs-12 col-sm-6 col-md-3" id="photos">
       <div class="preview">
         <img id="photoPreview" src={{photo.image}} ng-show='preview'/>
       </div>
@@ -29,7 +29,7 @@
         </form>
       </div>
     </div>
-    <div class="col-xs-4" id="gigs">
+    <div class="col-xs-12 col-sm-6 col-md-3" id="gigs">
       <div class="gigLocationPreview">
 
       </div>
@@ -39,6 +39,21 @@
           <label>Date </label><input type="date" />
           <label>Time </label><input type="time" id="timeInput"/>
           <label>Notes </label><textarea form="gig" placeholder="enter brief snippet..." maxlength="250"  class="descInput" spellcheck></textarea>
+          <input type="submit" value="Save" class="save" ng-click="saveGig(gig)"/>
+          <br />
+        </form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3" id="gigs">
+      <div class="pdfPreview">
+
+      </div>
+      <div id="addPdf">
+        <form id="pdf">
+          <label>Title </label><input type="text" placeholder="enter title..."  id="titleInput"/>
+          <label>Composer </label><input type="text" />
+          <label>Arranger </label><input type="time" id="timeInput"/>
+          <label>Pdf File </label><button class="preview" ng-click='show()'>preview</button><input pdf-upload type="file" id="pdfInput" ng-model="pdf.file" multiple/>
           <input type="submit" value="Save" class="save" ng-click="saveGig(gig)"/>
           <br />
         </form>

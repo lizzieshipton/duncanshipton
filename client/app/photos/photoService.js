@@ -1,4 +1,4 @@
-duncanApp.factory('photoService', ['$http', function($http) {
+angular.module('duncanApp').factory('photoService', ['$http', function($http) {
 
   const photoService = {};
 

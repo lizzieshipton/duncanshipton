@@ -1,4 +1,4 @@
-duncanApp.controller('adminController', ['$scope', '$sce', 'videoService', 'photoService', function($scope, $sce, videoService, photoService){
+angular.module('duncanApp').controller('AdminController', ['$scope', '$sce', 'videoService', 'photoService', function($scope, $sce, videoService, photoService){
 
   $scope.show = function() {
     // $scope.video.url = $scope.video.url.replace('watch?v=', 'embed/');
@@ -17,7 +17,7 @@ duncanApp.controller('adminController', ['$scope', '$sce', 'videoService', 'phot
     photoService.postPhoto(photo)
     .then((response) => {
       console.log(response);
-    })
+    });
   };
 
   $scope.reset = function() {

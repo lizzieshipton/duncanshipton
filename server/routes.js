@@ -7,4 +7,5 @@ module.exports.router = (app) => {
   app.get('/videos', routeHandlers.getVideos);
   app.get('/photos', routeHandlers.getPhotos);
   app.get('/gigs', routeHandlers.getGigs);
+  app.get('/package', routeHandlers.getPackage);
 };

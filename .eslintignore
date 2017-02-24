@@ -1,0 +1,10 @@
+client/bower_components
+node_modules
+.config
+.env
+.git
+.gitignore
+package.json
+bower.json
+Gruntfile.js
+README.md

@@ -10,3 +10,7 @@ bower_components
 
 # Dev Docs
 dev/*
+
+# Env/Config
+.env
+.config

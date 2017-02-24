@@ -1,4 +1,4 @@
-duncanApp.directive('photoUpload', function() {
+angular.module('duncanApp').directive('photoUploadDirective', function() {
   return {
     require: 'ngModel',
     restrict: 'A',

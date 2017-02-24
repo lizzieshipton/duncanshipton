@@ -12,7 +12,12 @@
     <meta name = "author" content = "Lizzie Shipton | Santa Cruz software engineer">
     <link rel = "shortcut icon" type = "image/x-icon" href = "https://static.wixstatic.com/media/59e569_b6f1973700db4c739bbab53f92fb015c~mv2.png/v1/fill/w_512,h_512,al_c/59e569_b6f1973700db4c739bbab53f92fb015c~mv2.png" />
     <link rel = "stylesheet" href = "bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- @if NODE_ENV == 'production' -->
+    <link rel="stylesheet" href="duncanshipton.min.css" type="text/css"/>
+    <!-- @endif -->
+    <!-- @if NODE_ENV == 'development' -->
     <link rel = "stylesheet" href = "styles/styles.css" type = "text/css"/>
+    <!-- @endif -->
 </head>
 <body>
   <ds-header></ds-header>
@@ -22,6 +27,11 @@
   <script src = "bower_components/angular-route/angular-route.js" type = "text/javascript"></script>
   <script src = "bower_components/jquery/dist/jquery.js" type = "text/javascript"></script>
   <script src = "bower_components/bootstrap/dist/js/bootstrap.js" type = "text/javascript"></script>
+  <!-- @if NODE_ENV='production' -->
+  <script src="traceur_runtime.js" type="text/javascript"></script>
+  <script src="duncanshipton.min.js" type="text/javascript"></script>
+  <!-- @endif -->
+  <!-- @if NODE_ENV ='development' -->
   <script src = "app/app.js" type = "text/javascript"></script>
   <script src = "app/home/headerDirective.js" type = "text/javascript"></script>
   <script src = "app/home/headerService.js" type = "text/javascript"></script>
@@ -33,4 +43,5 @@
   <script src = "app/videos/VideoController.js" type = "text/javascript"></script>
   <script src = "app/photos/PhotoController.js" type = "text/javascript"></script>
   <script src = "app/gigs/GigController.js" type = "text/javascript"></script>
+  <!-- @endif -->
 </body>
