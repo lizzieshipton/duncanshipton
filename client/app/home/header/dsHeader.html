@@ -1,0 +1,12 @@
+<div class='container-fluid'>
+  <header class="row">
+    <div class="col-xs-4"><span id="headerVersion">Vol {{ ver }} - No. {{ rev }}</span></div>
+    <div class="col-xs-4"><h1>Duncan Shipton</h1></div>
+    <div class="col-xs-4"><span id="headerDate">{{ date }}</span></div>
+  </header>
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="navbar" ng-repeat="menuItem in navbar">
+      <li>{{ menuItem }}</li>
+    </ul>
+  </nav>
+</div>

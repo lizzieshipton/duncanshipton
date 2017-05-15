@@ -8,8 +8,6 @@ angular.module('duncanApp').directive('dsHeader', ['dateFilter', 'headerService'
       $scope.date = dateFilter(new Date(), format);
       headerService.getPackage().then((data) => {
         $scope.ver = data.data.version;
-      });
-      headerService.getPackage().then((data) => {
         $scope.rev = data.data.revision;
       });
     }

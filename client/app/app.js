@@ -1,4 +1,4 @@
-angular.module('duncanApp', ['ngRoute']).run(['$rootScope', function($rootScope){
+angular.module('duncanApp', ['ngRoute', 'ui.bootstrap']).run(['$rootScope', function($rootScope){
   $rootScope.time = new Date().toLocaleDateString();
   $rootScope.version = {
     ver:''

@@ -9,11 +9,13 @@ header {
   text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  padding: 2em;
   margin-bottom: 2em;
 }
 
 h1 {
-  font: normal bolder 4em "Georgia", sans-serif;
+  font: normal bolder 3em "Georgia", sans-serif;
+  display: inline;
 }
 
 #headerDate {
@@ -24,7 +26,9 @@ h1 {
 }
 
 #headerDate, #headerVersion {
-  font: italic lighter .5em "Georgia", sans-serif;
+  font: italic lighter 1em "Georgia", sans-serif;
+  display: inline-block;
+  padding-top: 2em;
 }
 
 #adminMainDiv {

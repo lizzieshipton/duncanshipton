@@ -11,11 +11,12 @@
     <meta name = "keywords" content = "santa cruz guitar teacher, santa cruz music lessons, santa cruz guitar lessons, san jose guitar teacher, san jose guitar lessons, san jose music teacher, san jose music lessons, monterey guitar teacher, monterey guitar lessons, monterey music teacher, monterey guitar lessons, learn guitar, classical guitar, jazz guitar, guitar help, santa cruz, california, wedding music, santa cruz wedding band, santa cruz musician">
     <meta name = "author" content = "Lizzie Shipton | Santa Cruz software engineer">
     <link rel = "shortcut icon" type = "image/x-icon" href = "https://static.wixstatic.com/media/59e569_b6f1973700db4c739bbab53f92fb015c~mv2.png/v1/fill/w_512,h_512,al_c/59e569_b6f1973700db4c739bbab53f92fb015c~mv2.png" />
-    <link rel = "stylesheet" href = "bower_components/bootstrap/dist/css/bootstrap.css"/>
     <!-- @if NODE_ENV == 'production' -->
+    <link rel = "stylesheet" href = "bower_components/bootstrap-css-only/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="duncanshipton.min.css" type="text/css"/>
     <!-- @endif -->
     <!-- @if NODE_ENV == 'development' -->
+    <link rel = "stylesheet" href = "bower_components/bootstrap-css-only/css/bootstrap.css"/>
     <link rel = "stylesheet" href = "styles/styles.css" type = "text/css"/>
     <!-- @endif -->
 </head>
@@ -23,18 +24,24 @@
   <ds-header></ds-header>
   <div ng-view></div>
 
-  <script src = "bower_components/angular/angular.js" type = "text/javascript"></script>
-  <script src = "bower_components/angular-route/angular-route.js" type = "text/javascript"></script>
-  <script src = "bower_components/jquery/dist/jquery.js" type = "text/javascript"></script>
-  <script src = "bower_components/bootstrap/dist/js/bootstrap.js" type = "text/javascript"></script>
   <!-- @if NODE_ENV='production' -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui.bootstrap.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.min.js"></script>
   <script src="traceur_runtime.js" type="text/javascript"></script>
   <script src="duncanshipton.min.js" type="text/javascript"></script>
   <!-- @endif -->
   <!-- @if NODE_ENV ='development' -->
+  <script src = "bower_components/angular/angular.js" type = "text/javascript"></script>
+  <script src = "bower_components/angular-animate/angular-animate.js"></script>
+  <script src = "bower_components/angular-bootstrap/ui-bootstrap.js" type = "text/javascript"></script>
+  <script src = "bower_components/angular-route/angular-route.js" type = "text/javascript"></script>
+  <script src = "bower_components/angular-touch/angular-touch.js"></script>
   <script src = "app/app.js" type = "text/javascript"></script>
-  <script src = "app/home/headerDirective.js" type = "text/javascript"></script>
-  <script src = "app/home/headerService.js" type = "text/javascript"></script>
+  <script src = "app/home/header/headerDirective.js" type = "text/javascript"></script>
+  <script src = "app/home/header/headerService.js" type = "text/javascript"></script>
   <script src = "app/admin/AdminController.js" type = "text/javascript"></script>
   <script src = "app/videos/videoService.js" type = "text/javascript"></script>
   <script src = "app/photos/photoService.js" type = "text/javascript"></script>
